@@ -112,7 +112,7 @@ resource "aws_route_table_association" "public-b-association" {
 
 # NAT gateway for public networks
 resource "aws_eip" "nat-a" {
-  vpc = true
+  domain = "vpc"
   tags = {
     "Name" = "${local.vpc_name}-NAT-a"
   }
