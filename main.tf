@@ -119,7 +119,7 @@ resource "aws_eip" "nat-a" {
 }
 
 resource "aws_eip" "nat-b" {
-  vpc = true
+  domain = "vpc"
   tags = {
     "Name" = "${local.vpc_name}-NAT-b"
   }
